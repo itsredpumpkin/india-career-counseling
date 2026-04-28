@@ -1,0 +1,151 @@
+type TestimonialInput = 
+ record {
+   achievement: text;
+   courseStream: text;
+   isActive: bool;
+   isFeatured: bool;
+   quote: text;
+   starRating: nat;
+   studentName: text;
+ };
+type Testimonial = 
+ record {
+   achievement: text;
+   courseStream: text;
+   id: nat;
+   isActive: bool;
+   isFeatured: bool;
+   quote: text;
+   starRating: nat;
+   studentName: text;
+ };
+type CourseType = 
+ variant {
+   FullTime;
+   PartTime;
+ };
+type CourseStream = 
+ variant {
+   Arts;
+   Commerce;
+   Engineering;
+   Law;
+   Management;
+   Medical;
+   Other;
+   Science;
+ };
+type CourseLevel = 
+ variant {
+   Bachelor;
+   Diploma;
+   Master;
+   PhD;
+ };
+type CourseInput = 
+ record {
+   careerProspects: vec text;
+   courseType: CourseType;
+   description: text;
+   duration: text;
+   eligibility: text;
+   feesINR: nat;
+   isActive: bool;
+   level: CourseLevel;
+   name: text;
+   partnerCollegesCount: nat;
+   stream: CourseStream;
+ };
+type Course = 
+ record {
+   careerProspects: vec text;
+   courseType: CourseType;
+   description: text;
+   duration: text;
+   eligibility: text;
+   feesINR: nat;
+   id: nat;
+   isActive: bool;
+   level: CourseLevel;
+   name: text;
+   partnerCollegesCount: nat;
+   stream: CourseStream;
+ };
+type ContactSubmissionPublic = 
+ record {
+   courseInterested: text;
+   email: text;
+   id: nat;
+   isRead: bool;
+   message: text;
+   name: text;
+   phone: text;
+   submittedAt: int;
+ };
+type ContactSubmissionInput = 
+ record {
+   courseInterested: text;
+   email: text;
+   message: text;
+   name: text;
+   phone: text;
+ };
+type BlogPostInput = 
+ record {
+   author: text;
+   category: text;
+   content: text;
+   excerpt: text;
+   imageUrl: text;
+   isDraft: bool;
+   publishDate: int;
+   slug: text;
+   tags: vec text;
+   title: text;
+ };
+type BlogPost = 
+ record {
+   author: text;
+   category: text;
+   content: text;
+   excerpt: text;
+   id: nat;
+   imageUrl: text;
+   isDraft: bool;
+   publishDate: int;
+   slug: text;
+   tags: vec text;
+   title: text;
+ };
+service : {
+  adminCreateBlogPost: (token: text, input: BlogPostInput) -> (nat);
+  adminCreateCourse: (token: text, input: CourseInput) -> (nat);
+  adminCreateTestimonial: (token: text, input: TestimonialInput) -> (nat);
+  adminDeleteBlogPost: (token: text, id: nat) -> (bool);
+  adminDeleteCourse: (token: text, id: nat) -> (bool);
+  adminDeleteTestimonial: (token: text, id: nat) -> (bool);
+  adminLogin: (username: text, password: text) ->
+   (variant {
+      err: text;
+      ok: text;
+    });
+  adminLogout: (token: text) -> ();
+  adminSeedSampleData: (token: text) -> (text);
+  adminUpdateBlogPost: (token: text, id: nat, input: BlogPostInput) -> (bool);
+  adminUpdateCourse: (token: text, id: nat, input: CourseInput) -> (bool);
+  adminUpdateTestimonial: (token: text, id: nat, input: TestimonialInput) ->
+   (bool);
+  deleteContactSubmission: (token: text, id: nat) -> (bool);
+  getBlogPostById: (id: nat) -> (opt BlogPost) query;
+  getBlogPostBySlug: (slug: text) -> (opt BlogPost) query;
+  getBlogPosts: (publishedOnly: bool) -> (vec BlogPost) query;
+  getContactSubmissions: (token: text) -> (vec ContactSubmissionPublic) query;
+  getCourseById: (id: nat) -> (opt Course) query;
+  getCourses: (activeOnly: bool) -> (vec Course) query;
+  getTestimonialById: (id: nat) -> (opt Testimonial) query;
+  getTestimonials: (activeOnly: bool, featuredOnly: bool) ->
+   (vec Testimonial) query;
+  markContactSubmissionRead: (token: text, id: nat) -> (bool);
+  submitContactForm: (input: ContactSubmissionInput) -> (nat);
+  validateAdminSession: (token: text) -> (bool) query;
+}

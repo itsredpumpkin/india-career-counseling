@@ -1,0 +1,117 @@
+// Version: 1.0.0
+type AdminSession__869789067 = {expiresAt : Int; username : Text};
+type BlogPost__141542067 =
+  {
+    author : Text;
+    category : Text;
+    content : Text;
+    excerpt : Text;
+    id : Nat;
+    imageUrl : Text;
+    isDraft : Bool;
+    publishDate : Int;
+    slug : Text;
+    tags : [Text];
+    title : Text
+  };
+type ContactSubmission__1006699278 =
+  {
+    courseInterested : Text;
+    email : Text;
+    id : Nat;
+    var isRead : Bool;
+    message : Text;
+    name : Text;
+    phone : Text;
+    submittedAt : Int
+  };
+type CourseLevel__760064837 = {#Bachelor; #Diploma; #Master; #PhD};
+type CourseStream__299778572 =
+  {
+    #Arts;
+    #Commerce;
+    #Engineering;
+    #Law;
+    #Management;
+    #Medical;
+    #Other;
+    #Science
+  };
+type CourseType__615619900 = {#FullTime; #PartTime};
+type Course__28014338 =
+  {
+    careerProspects : [Text];
+    courseType : CourseType__615619900;
+    description : Text;
+    duration : Text;
+    eligibility : Text;
+    feesINR : Nat;
+    id : Nat;
+    isActive : Bool;
+    level : CourseLevel__760064837;
+    name : Text;
+    partnerCollegesCount : Nat;
+    stream : CourseStream__299778572
+  };
+type Data__791452850<K, V> =
+  {var count : Nat__490723111; kvs : [var ?(K, V)]};
+type Internal__8484328<K, V> =
+  {children : [var ?Node__46230540<K, V>]; data : Data__791452850<K, V>};
+type Leaf__809889148<K, V> = {data : Data__791452850<K, V>};
+type Nat__490723111 = Nat__920180692;
+type Nat__920180692 = Nat;
+type Node__46230540<K, V> =
+  {#internal : Internal__8484328<K, V>; #leaf : Leaf__809889148<K, V>};
+type Testimonial__511293256 =
+  {
+    achievement : Text;
+    courseStream : Text;
+    id : Nat;
+    isActive : Bool;
+    isFeatured : Bool;
+    quote : Text;
+    starRating : Nat;
+    studentName : Text
+  };
+actor {
+  stable ADMIN_PASSWORD : Text;
+  stable ADMIN_USERNAME : Text;
+  stable SESSION_TTL_NS : Int;
+  stable counters :
+    {
+      var nextCourseId : Nat;
+      var nextPostId : Nat;
+      var nextSubmissionId : Nat;
+      var nextTestimonialId : Nat;
+      var seeded : Bool
+    };
+  stable courses :
+    {
+      var blockIndex : Nat__490723111;
+      var blocks : [var [var ?Course__28014338]];
+      var elementIndex : Nat__490723111
+    };
+  stable posts :
+    {
+      var blockIndex : Nat__490723111;
+      var blocks : [var [var ?BlogPost__141542067]];
+      var elementIndex : Nat__490723111
+    };
+  stable sessions :
+    {
+      var root : Node__46230540<Text, AdminSession__869789067>;
+      var size : Nat__490723111
+    };
+  stable submissions :
+    {
+      var blockIndex : Nat__490723111;
+      var blocks : [var [var ?ContactSubmission__1006699278]];
+      var elementIndex : Nat__490723111
+    };
+  stable testimonials :
+    {
+      var blockIndex : Nat__490723111;
+      var blocks : [var [var ?Testimonial__511293256]];
+      var elementIndex : Nat__490723111
+    }
+};

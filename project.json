@@ -1,0 +1,24 @@
+{
+  "overview": "India Career Counseling (ICC) is a full-featured educational counseling portal for students and parents. Explore courses, learn about services, read career blogs, connect with counselors, and manage all content through a protected admin panel.",
+  "features": [
+    "Animated hero with counters and gradient",
+    "8 public pages including 5 service detail pages",
+    "Courses listing with stream/level/type filters",
+    "Blog with 9 articles and detail pages",
+    "Testimonials carousel with auto-scroll",
+    "Contact form with backend storage",
+    "Protected admin panel for CRUD management",
+    "Mobile responsive with Indian saffron/navy theme"
+  ],
+  "category": "education",
+  "tags": [
+    "education",
+    "career-counseling",
+    "india",
+    "admissions",
+    "courses",
+    "admin-panel",
+    "counseling-portal"
+  ],
+  "last_updated": "2026-04-13T09:25:02.108Z"
+}
