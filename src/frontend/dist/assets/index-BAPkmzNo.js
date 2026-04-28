@@ -33636,7 +33636,6 @@ const socials = [
 ];
 function Footer() {
   const year = (/* @__PURE__ */ new Date()).getFullYear();
-  const hostname = typeof window !== "undefined" ? encodeURIComponent(window.location.hostname) : "";
   return /* @__PURE__ */ jsxRuntimeExports.jsxs("footer", { className: "bg-secondary text-secondary-foreground", children: [
     /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "container mx-auto px-4 py-14", children: /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10", children: [
       /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "space-y-4", children: [
@@ -33693,7 +33692,10 @@ function Footer() {
         /* @__PURE__ */ jsxRuntimeExports.jsxs("ul", { className: "space-y-3", children: [
           /* @__PURE__ */ jsxRuntimeExports.jsxs("li", { className: "flex items-start gap-3", children: [
             /* @__PURE__ */ jsxRuntimeExports.jsx(MapPin, { className: "w-4 h-4 text-primary mt-0.5 shrink-0" }),
-            /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "text-sm text-secondary-foreground/70", children: "H-15, BSI Business Park 407, 4th Floor, Sector-63, Noida, INDIA" })
+            /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "flex flex-col gap-1", children: [
+              /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "text-sm text-secondary-foreground/70", children: "H-15, BSI Business Park 407, 4th Floor, Sector-63, Noida, INDIA" }),
+              /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "text-sm text-secondary-foreground/70", children: "No-75, At PO. Chas Gujarat Colony, Nearest - Jain Mandir Bokaro, Dist-Bokaro Jharkhand, PIN-827013" })
+            ] })
           ] }),
           /* @__PURE__ */ jsxRuntimeExports.jsxs("li", { className: "flex items-start gap-3", children: [
             /* @__PURE__ */ jsxRuntimeExports.jsx(Phone, { className: "w-4 h-4 text-primary shrink-0 mt-0.5" }),
@@ -33701,17 +33703,17 @@ function Footer() {
               /* @__PURE__ */ jsxRuntimeExports.jsx(
                 "a",
                 {
-                  href: "tel:+918595027085",
+                  href: "tel:+918294023905",
                   className: "text-sm text-secondary-foreground/70 hover:text-primary transition-smooth",
-                  children: "+91 8595027085"
+                  children: "+91 8294023905"
                 }
               ),
               /* @__PURE__ */ jsxRuntimeExports.jsx(
                 "a",
                 {
-                  href: "tel:+918967600330",
+                  href: "tel:+919606030954",
                   className: "text-sm text-secondary-foreground/70 hover:text-primary transition-smooth",
-                  children: "+91 8967600330"
+                  children: "+91 9606030954"
                 }
               )
             ] })
@@ -33732,11 +33734,24 @@ function Footer() {
             /* @__PURE__ */ jsxRuntimeExports.jsx(
               "a",
               {
-                href: "https://wa.me/918595027085",
+                href: "https://wa.me/918294023905",
                 target: "_blank",
                 rel: "noopener noreferrer",
                 className: "text-sm text-secondary-foreground/70 hover:text-primary transition-smooth",
-                children: "WhatsApp: +91 8595027085"
+                children: "WhatsApp: +91 8294023905"
+              }
+            )
+          ] }),
+          /* @__PURE__ */ jsxRuntimeExports.jsxs("li", { className: "flex items-center gap-3", children: [
+            /* @__PURE__ */ jsxRuntimeExports.jsx(Globe, { className: "w-4 h-4 text-primary shrink-0" }),
+            /* @__PURE__ */ jsxRuntimeExports.jsx(
+              "a",
+              {
+                href: "https://www.indiacareerc.com",
+                target: "_blank",
+                rel: "noopener noreferrer",
+                className: "text-sm text-secondary-foreground/70 hover:text-primary transition-smooth",
+                children: "www.indiacareerc.com"
               }
             )
           ] })
@@ -33759,23 +33774,9 @@ function Footer() {
         " India Career Counseling. All rights reserved."
       ] }),
       /* @__PURE__ */ jsxRuntimeExports.jsxs("p", { className: "text-center", children: [
-        "Built & design by",
+        "Built & designed by",
         " ",
         /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "text-primary font-semibold", children: "Red Pumpkin Marketing" })
-      ] }),
-      /* @__PURE__ */ jsxRuntimeExports.jsxs("p", { children: [
-        "Built with love using",
-        " ",
-        /* @__PURE__ */ jsxRuntimeExports.jsx(
-          "a",
-          {
-            href: `https://caffeine.ai?utm_source=caffeine-footer&utm_medium=referral&utm_content=${hostname}`,
-            target: "_blank",
-            rel: "noopener noreferrer",
-            className: "text-primary hover:underline",
-            children: "caffeine.ai"
-          }
-        )
       ] })
     ] }) })
   ] });
@@ -33838,7 +33839,7 @@ function Navbar() {
   return /* @__PURE__ */ jsxRuntimeExports.jsxs(
     "header",
     {
-      className: `fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${scrolled ? "bg-card/95 backdrop-blur-md shadow-elevated border-b border-border" : "bg-card border-b border-border/40"}`,
+      className: `fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${scrolled ? "bg-secondary/95 backdrop-blur-md shadow-elevated border-b border-secondary-foreground/10" : "bg-card border-b border-border/40"}`,
       "data-ocid": "navbar",
       children: [
         /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "bg-secondary text-secondary-foreground py-1.5 px-4 text-xs hidden md:flex items-center justify-between", children: [
@@ -33849,18 +33850,18 @@ function Navbar() {
               /* @__PURE__ */ jsxRuntimeExports.jsx(
                 "a",
                 {
-                  href: "tel:+918595027085",
+                  href: "tel:+918294023905",
                   className: "hover:text-primary transition-smooth",
-                  children: "+91 8595027085"
+                  children: "+91 8294023905"
                 }
               ),
               " | ",
               /* @__PURE__ */ jsxRuntimeExports.jsx(
                 "a",
                 {
-                  href: "tel:+918967600330",
+                  href: "tel:+919606030954",
                   className: "hover:text-primary transition-smooth",
-                  children: "+91 8967600330"
+                  children: "+91 9606030954"
                 }
               )
             ] }),
@@ -33900,7 +33901,7 @@ function Navbar() {
                     {
                       type: "button",
                       onClick: () => setServicesOpen(!servicesOpen),
-                      className: `flex items-center gap-1 px-3 py-2 rounded-lg text-sm font-medium transition-smooth hover:bg-primary/10 hover:text-primary ${isActive(link.href) ? "text-primary bg-primary/10" : "text-foreground"}`,
+                      className: `flex items-center gap-1 px-3 py-2 rounded-lg text-sm font-medium transition-smooth hover:bg-primary/10 hover:text-primary ${isActive(link.href) ? "text-primary bg-primary/10" : scrolled ? "text-secondary-foreground" : "text-foreground"}`,
                       "data-ocid": "nav-services-toggle",
                       children: [
                         link.label,
@@ -33927,7 +33928,7 @@ function Navbar() {
                   Link,
                   {
                     to: link.href,
-                    className: `px-3 py-2 rounded-lg text-sm font-medium transition-smooth hover:bg-primary/10 hover:text-primary ${isActive(link.href) ? "text-primary bg-primary/10" : "text-foreground"}`,
+                    className: `px-3 py-2 rounded-lg text-sm font-medium transition-smooth hover:bg-primary/10 hover:text-primary ${isActive(link.href) ? "text-primary bg-primary/10" : scrolled ? "text-secondary-foreground" : "text-foreground"}`,
                     "data-ocid": `nav-${link.label.toLowerCase()}`,
                     children: link.label
                   },
@@ -33941,7 +33942,7 @@ function Navbar() {
               Link,
               {
                 to: "/contact",
-                className: "px-4 py-2 text-sm font-semibold text-primary border border-primary rounded-lg hover:bg-primary/10 transition-smooth",
+                className: `px-4 py-2 text-sm font-semibold border border-primary rounded-lg hover:bg-primary/10 transition-smooth ${scrolled ? "text-primary" : "text-primary"}`,
                 "data-ocid": "nav-book-session",
                 children: "Free Session"
               }
@@ -33961,7 +33962,7 @@ function Navbar() {
             "button",
             {
               type: "button",
-              className: "lg:hidden p-2 rounded-lg hover:bg-muted transition-smooth",
+              className: `lg:hidden p-2 rounded-lg hover:bg-muted transition-smooth ${scrolled ? "text-secondary-foreground" : "text-foreground"}`,
               onClick: () => setIsOpen(!isOpen),
               "aria-label": "Toggle mobile menu",
               "data-ocid": "nav-hamburger",
@@ -34017,9 +34018,17 @@ function Navbar() {
                 /* @__PURE__ */ jsxRuntimeExports.jsx(
                   "a",
                   {
-                    href: "tel:+918595027085",
+                    href: "tel:+918294023905",
                     className: "flex items-center gap-2 px-3 py-1.5 text-sm text-muted-foreground hover:text-primary transition-smooth",
-                    children: "📞 +91 8595027085"
+                    children: "📞 +91 8294023905"
+                  }
+                ),
+                /* @__PURE__ */ jsxRuntimeExports.jsx(
+                  "a",
+                  {
+                    href: "tel:+919606030954",
+                    className: "flex items-center gap-2 px-3 py-1.5 text-sm text-muted-foreground hover:text-primary transition-smooth",
+                    children: "📞 +91 9606030954"
                   }
                 ),
                 /* @__PURE__ */ jsxRuntimeExports.jsx(
@@ -55656,9 +55665,9 @@ const CONTACT_INFO = [
   {
     icon: Phone,
     label: "Call Us",
-    value: "+91 8595027085",
-    sub: "+91 8967600330 | Mon–Sat, 9 AM – 6 PM",
-    href: "tel:+918595027085"
+    value: "+91 8294023905",
+    sub: "+91 9606030954 | Mon–Sat, 9 AM – 6 PM",
+    href: "tel:+918294023905"
   },
   {
     icon: Mail,
@@ -55670,16 +55679,23 @@ const CONTACT_INFO = [
   {
     icon: MessageCircle,
     label: "WhatsApp",
-    value: "+91 8595027085",
+    value: "+91 8294023905",
     sub: "Chat with us instantly",
-    href: "https://wa.me/918595027085"
+    href: "https://wa.me/918294023905"
   },
   {
     icon: MapPin,
-    label: "Visit Us",
+    label: "Noida Office",
     value: "H-15, BSI Business Park 407",
     sub: "4th Floor, Sector-63, Noida, INDIA",
     href: "#map"
+  },
+  {
+    icon: MapPin,
+    label: "Bokaro Office",
+    value: "No-75, At PO. Chas Gujarat Colony",
+    sub: "Nearest - Jain Mandir Bokaro, Dist-Bokaro Jharkhand, PIN-827013",
+    href: null
   },
   {
     icon: Clock,
@@ -55687,6 +55703,13 @@ const CONTACT_INFO = [
     value: "Monday – Saturday",
     sub: "9:00 AM – 6:00 PM IST",
     href: null
+  },
+  {
+    icon: Globe,
+    label: "Website",
+    value: "www.indiacareerc.com",
+    sub: "Visit our official website",
+    href: "https://www.indiacareerc.com"
   }
 ];
 const FAQS = [
@@ -55851,7 +55874,7 @@ function ContactPage() {
               animate: { opacity: 1, y: 0 },
               transition: { duration: 0.6 },
               children: [
-                /* @__PURE__ */ jsxRuntimeExports.jsxs("span", { className: "inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-primary/20 text-primary text-sm font-semibold border border-primary/30 mb-5", children: [
+                /* @__PURE__ */ jsxRuntimeExports.jsxs("span", { className: "inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/10 text-white text-sm font-semibold border border-white/25 mb-5", children: [
                   /* @__PURE__ */ jsxRuntimeExports.jsx(Star, { className: "w-3.5 h-3.5" }),
                   " Free First Session"
                 ] }),
@@ -55885,11 +55908,11 @@ function ContactPage() {
                     {
                       asChild: true,
                       variant: "outline",
-                      className: "border-primary/40 text-primary hover:bg-primary/10 px-8 py-3 rounded-xl",
+                      className: "border-white/40 text-white hover:bg-white/10 px-8 py-3 rounded-xl",
                       children: /* @__PURE__ */ jsxRuntimeExports.jsxs(
                         "a",
                         {
-                          href: "https://wa.me/918595027085",
+                          href: "https://wa.me/918294023905",
                           target: "_blank",
                           rel: "noopener noreferrer",
                           "data-ocid": "hero-whatsapp",
@@ -56106,7 +56129,7 @@ function ContactPage() {
             /* @__PURE__ */ jsxRuntimeExports.jsxs(
               motion.a,
               {
-                href: "https://wa.me/918595027085",
+                href: "https://wa.me/918294023905",
                 target: "_blank",
                 rel: "noopener noreferrer",
                 initial: { opacity: 0, y: 16 },
@@ -56234,7 +56257,7 @@ function ContactPage() {
                   children: /* @__PURE__ */ jsxRuntimeExports.jsxs(
                     "a",
                     {
-                      href: "https://wa.me/918595027085",
+                      href: "https://wa.me/918294023905",
                       target: "_blank",
                       rel: "noopener noreferrer",
                       "data-ocid": "faq-whatsapp",
@@ -56254,7 +56277,7 @@ function ContactPage() {
     /* @__PURE__ */ jsxRuntimeExports.jsxs(
       "a",
       {
-        href: "tel:+918595027085",
+        href: "tel:+918294023905",
         "aria-label": "Call us now",
         className: "fixed bottom-6 right-6 z-50 w-14 h-14 rounded-full flex items-center justify-center shadow-xl hover:scale-110 transition-smooth gradient-primary",
         "data-ocid": "floating-call",
@@ -58352,7 +58375,7 @@ const TESTIMONIALS = [
   {
     name: "Rohan Gupta",
     course: "MBBS",
-    college: "AIIMS Bangalore",
+    college: "AIIMS MADURAI",
     message: "The stream selection guidance from ICC was spot-on. Now I'm living my dream of becoming a doctor. The counselors genuinely care about your future.",
     rating: 5,
     avatar: "RG",
@@ -61499,7 +61522,7 @@ const SAMPLE_TESTIMONIALS = [
     id: "4",
     studentName: "Priya Mehta",
     course: "MBBS",
-    college: "AIIMS Delhi",
+    college: "AIIMS MADURAI",
     year: "2023",
     message: "The NEET preparation roadmap from ICC was a game-changer. I got into AIIMS in my first attempt.",
     rating: 5,

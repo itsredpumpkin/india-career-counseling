@@ -13,6 +13,7 @@ import { useSubmitContact } from "@/hooks/useBackend";
 import {
   ChevronDown,
   Clock,
+  Globe,
   Mail,
   MapPin,
   MessageCircle,
@@ -39,9 +40,9 @@ const CONTACT_INFO = [
   {
     icon: Phone,
     label: "Call Us",
-    value: "+91 8595027085",
-    sub: "+91 8967600330 | Mon–Sat, 9 AM – 6 PM",
-    href: "tel:+918595027085",
+    value: "+91 8294023905",
+    sub: "+91 9606030954 | Mon–Sat, 9 AM – 6 PM",
+    href: "tel:+918294023905",
   },
   {
     icon: Mail,
@@ -53,16 +54,23 @@ const CONTACT_INFO = [
   {
     icon: MessageCircle,
     label: "WhatsApp",
-    value: "+91 8595027085",
+    value: "+91 8294023905",
     sub: "Chat with us instantly",
-    href: "https://wa.me/918595027085",
+    href: "https://wa.me/918294023905",
   },
   {
     icon: MapPin,
-    label: "Visit Us",
+    label: "Noida Office",
     value: "H-15, BSI Business Park 407",
     sub: "4th Floor, Sector-63, Noida, INDIA",
     href: "#map",
+  },
+  {
+    icon: MapPin,
+    label: "Bokaro Office",
+    value: "No-75, At PO. Chas Gujarat Colony",
+    sub: "Nearest - Jain Mandir Bokaro, Dist-Bokaro Jharkhand, PIN-827013",
+    href: null,
   },
   {
     icon: Clock,
@@ -70,6 +78,13 @@ const CONTACT_INFO = [
     value: "Monday – Saturday",
     sub: "9:00 AM – 6:00 PM IST",
     href: null,
+  },
+  {
+    icon: Globe,
+    label: "Website",
+    value: "www.indiacareerc.com",
+    sub: "Visit our official website",
+    href: "https://www.indiacareerc.com",
   },
 ];
 
@@ -246,7 +261,7 @@ export default function ContactPage() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
           >
-            <span className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-primary/20 text-primary text-sm font-semibold border border-primary/30 mb-5">
+            <span className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/10 text-white text-sm font-semibold border border-white/25 mb-5">
               <Star className="w-3.5 h-3.5" /> Free First Session
             </span>
             <h1 className="font-display font-extrabold text-4xl md:text-5xl lg:text-6xl text-white mb-5 leading-tight">
@@ -276,10 +291,10 @@ export default function ContactPage() {
               <Button
                 asChild
                 variant="outline"
-                className="border-primary/40 text-primary hover:bg-primary/10 px-8 py-3 rounded-xl"
+                className="border-white/40 text-white hover:bg-white/10 px-8 py-3 rounded-xl"
               >
                 <a
-                  href="https://wa.me/918595027085"
+                  href="https://wa.me/918294023905"
                   target="_blank"
                   rel="noopener noreferrer"
                   data-ocid="hero-whatsapp"
@@ -540,7 +555,7 @@ export default function ContactPage() {
 
               {/* WhatsApp CTA */}
               <motion.a
-                href="https://wa.me/918595027085"
+                href="https://wa.me/918294023905"
                 target="_blank"
                 rel="noopener noreferrer"
                 initial={{ opacity: 0, y: 16 }}
@@ -677,7 +692,7 @@ export default function ContactPage() {
                 className="rounded-xl px-6 border-primary/30 text-primary hover:bg-primary/10"
               >
                 <a
-                  href="https://wa.me/918595027085"
+                  href="https://wa.me/918294023905"
                   target="_blank"
                   rel="noopener noreferrer"
                   data-ocid="faq-whatsapp"
@@ -693,7 +708,7 @@ export default function ContactPage() {
 
       {/* ── Floating Call Button ── */}
       <a
-        href="tel:+918595027085"
+        href="tel:+918294023905"
         aria-label="Call us now"
         className="fixed bottom-6 right-6 z-50 w-14 h-14 rounded-full flex items-center justify-center shadow-xl hover:scale-110 transition-smooth gradient-primary"
         data-ocid="floating-call"

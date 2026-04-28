@@ -75,7 +75,7 @@ export default function Navbar() {
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         scrolled
-          ? "bg-card/95 backdrop-blur-md shadow-elevated border-b border-border"
+          ? "bg-secondary/95 backdrop-blur-md shadow-elevated border-b border-secondary-foreground/10"
           : "bg-card border-b border-border/40"
       }`}
       data-ocid="navbar"
@@ -86,17 +86,17 @@ export default function Navbar() {
           <span className="flex items-center gap-1.5">
             📞{" "}
             <a
-              href="tel:+918595027085"
+              href="tel:+918294023905"
               className="hover:text-primary transition-smooth"
             >
-              +91 8595027085
+              +91 8294023905
             </a>
             {" | "}
             <a
-              href="tel:+918967600330"
+              href="tel:+919606030954"
               className="hover:text-primary transition-smooth"
             >
-              +91 8967600330
+              +91 9606030954
             </a>
           </span>
           <span>
@@ -139,7 +139,9 @@ export default function Navbar() {
                     className={`flex items-center gap-1 px-3 py-2 rounded-lg text-sm font-medium transition-smooth hover:bg-primary/10 hover:text-primary ${
                       isActive(link.href)
                         ? "text-primary bg-primary/10"
-                        : "text-foreground"
+                        : scrolled
+                          ? "text-secondary-foreground"
+                          : "text-foreground"
                     }`}
                     data-ocid="nav-services-toggle"
                   >
@@ -172,7 +174,9 @@ export default function Navbar() {
                   className={`px-3 py-2 rounded-lg text-sm font-medium transition-smooth hover:bg-primary/10 hover:text-primary ${
                     isActive(link.href)
                       ? "text-primary bg-primary/10"
-                      : "text-foreground"
+                      : scrolled
+                        ? "text-secondary-foreground"
+                        : "text-foreground"
                   }`}
                   data-ocid={`nav-${link.label.toLowerCase()}`}
                 >
@@ -186,7 +190,7 @@ export default function Navbar() {
           <div className="hidden lg:flex items-center gap-3">
             <Link
               to="/contact"
-              className="px-4 py-2 text-sm font-semibold text-primary border border-primary rounded-lg hover:bg-primary/10 transition-smooth"
+              className={`px-4 py-2 text-sm font-semibold border border-primary rounded-lg hover:bg-primary/10 transition-smooth ${scrolled ? "text-primary" : "text-primary"}`}
               data-ocid="nav-book-session"
             >
               Free Session
@@ -204,7 +208,7 @@ export default function Navbar() {
           {/* Mobile Hamburger */}
           <button
             type="button"
-            className="lg:hidden p-2 rounded-lg hover:bg-muted transition-smooth"
+            className={`lg:hidden p-2 rounded-lg hover:bg-muted transition-smooth ${scrolled ? "text-secondary-foreground" : "text-foreground"}`}
             onClick={() => setIsOpen(!isOpen)}
             aria-label="Toggle mobile menu"
             data-ocid="nav-hamburger"
@@ -266,10 +270,16 @@ export default function Navbar() {
           {/* Mobile contact info */}
           <div className="mt-3 pt-3 border-t border-border space-y-1.5 pb-2">
             <a
-              href="tel:+918595027085"
+              href="tel:+918294023905"
               className="flex items-center gap-2 px-3 py-1.5 text-sm text-muted-foreground hover:text-primary transition-smooth"
             >
-              📞 +91 8595027085
+              📞 +91 8294023905
+            </a>
+            <a
+              href="tel:+919606030954"
+              className="flex items-center gap-2 px-3 py-1.5 text-sm text-muted-foreground hover:text-primary transition-smooth"
+            >
+              📞 +91 9606030954
             </a>
             <a
               href="mailto:indiacareerc@gmail.com"

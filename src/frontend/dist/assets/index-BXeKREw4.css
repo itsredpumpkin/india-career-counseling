@@ -2165,6 +2165,9 @@ video {
 .bg-secondary\/10 {
   background-color: oklch(var(--secondary) / 0.1);
 }
+.bg-secondary\/95 {
+  background-color: oklch(var(--secondary) / 0.95);
+}
 .bg-sidebar {
   background-color: oklch(var(--sidebar));
 }

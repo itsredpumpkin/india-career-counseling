@@ -58,7 +58,7 @@ const SAMPLE_TESTIMONIALS: Testimonial[] = [
     id: "4",
     studentName: "Priya Mehta",
     course: "MBBS",
-    college: "AIIMS Delhi",
+    college: "AIIMS MADURAI",
     year: "2023",
     message:
       "The NEET preparation roadmap from ICC was a game-changer. I got into AIIMS in my first attempt.",

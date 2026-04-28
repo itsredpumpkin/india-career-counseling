@@ -1,6 +1,7 @@
 import { Link } from "@tanstack/react-router";
 import {
   Facebook,
+  Globe,
   Instagram,
   Mail,
   MapPin,
@@ -36,10 +37,6 @@ const socials = [
 
 export default function Footer() {
   const year = new Date().getFullYear();
-  const hostname =
-    typeof window !== "undefined"
-      ? encodeURIComponent(window.location.hostname)
-      : "";
 
   return (
     <footer className="bg-secondary text-secondary-foreground">
@@ -122,25 +119,31 @@ export default function Footer() {
             <ul className="space-y-3">
               <li className="flex items-start gap-3">
                 <MapPin className="w-4 h-4 text-primary mt-0.5 shrink-0" />
-                <span className="text-sm text-secondary-foreground/70">
-                  H-15, BSI Business Park 407, 4th Floor, Sector-63, Noida,
-                  INDIA
-                </span>
+                <div className="flex flex-col gap-1">
+                  <span className="text-sm text-secondary-foreground/70">
+                    H-15, BSI Business Park 407, 4th Floor, Sector-63, Noida,
+                    INDIA
+                  </span>
+                  <span className="text-sm text-secondary-foreground/70">
+                    No-75, At PO. Chas Gujarat Colony, Nearest - Jain Mandir
+                    Bokaro, Dist-Bokaro Jharkhand, PIN-827013
+                  </span>
+                </div>
               </li>
               <li className="flex items-start gap-3">
                 <Phone className="w-4 h-4 text-primary shrink-0 mt-0.5" />
                 <div className="flex flex-col gap-1">
                   <a
-                    href="tel:+918595027085"
+                    href="tel:+918294023905"
                     className="text-sm text-secondary-foreground/70 hover:text-primary transition-smooth"
                   >
-                    +91 8595027085
+                    +91 8294023905
                   </a>
                   <a
-                    href="tel:+918967600330"
+                    href="tel:+919606030954"
                     className="text-sm text-secondary-foreground/70 hover:text-primary transition-smooth"
                   >
-                    +91 8967600330
+                    +91 9606030954
                   </a>
                 </div>
               </li>
@@ -156,12 +159,23 @@ export default function Footer() {
               <li className="flex items-center gap-3">
                 <MessageCircle className="w-4 h-4 text-primary shrink-0" />
                 <a
-                  href="https://wa.me/918595027085"
+                  href="https://wa.me/918294023905"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-sm text-secondary-foreground/70 hover:text-primary transition-smooth"
                 >
-                  WhatsApp: +91 8595027085
+                  WhatsApp: +91 8294023905
+                </a>
+              </li>
+              <li className="flex items-center gap-3">
+                <Globe className="w-4 h-4 text-primary shrink-0" />
+                <a
+                  href="https://www.indiacareerc.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-sm text-secondary-foreground/70 hover:text-primary transition-smooth"
+                >
+                  www.indiacareerc.com
                 </a>
               </li>
             </ul>
@@ -183,21 +197,10 @@ export default function Footer() {
         <div className="container mx-auto px-4 flex flex-col md:flex-row items-center justify-between gap-2 text-xs text-secondary-foreground/50">
           <p>© {year} India Career Counseling. All rights reserved.</p>
           <p className="text-center">
-            Built &amp; design by{" "}
+            Built &amp; designed by{" "}
             <span className="text-primary font-semibold">
               Red Pumpkin Marketing
             </span>
-          </p>
-          <p>
-            Built with love using{" "}
-            <a
-              href={`https://caffeine.ai?utm_source=caffeine-footer&utm_medium=referral&utm_content=${hostname}`}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-primary hover:underline"
-            >
-              caffeine.ai
-            </a>
           </p>
         </div>
       </div>

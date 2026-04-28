@@ -132,7 +132,7 @@ const TESTIMONIALS = [
   {
     name: "Rohan Gupta",
     course: "MBBS",
-    college: "AIIMS Bangalore",
+    college: "AIIMS MADURAI",
     message:
       "The stream selection guidance from ICC was spot-on. Now I'm living my dream of becoming a doctor. The counselors genuinely care about your future.",
     rating: 5,
