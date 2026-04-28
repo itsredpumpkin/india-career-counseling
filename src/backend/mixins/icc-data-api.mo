@@ -32,7 +32,7 @@ mixin (
         username;
         expiresAt = now + SESSION_TTL_NS;
       };
-      sessions.put(token, session);
+      sessions.add(token, session);
       #ok(token)
     } else {
       #err("Invalid username or password")
@@ -40,7 +40,7 @@ mixin (
   };
 
   public shared func adminLogout(token : Text) : async () {
-    sessions.delete(token)
+    sessions.remove(token)
   };
 
   public query func validateAdminSession(token : Text) : async Bool {
