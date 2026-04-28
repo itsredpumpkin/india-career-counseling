@@ -1,30 +1,23 @@
-// This file will be updated once backend bindings are generated
-// For now, we'll create a mock implementation
+// Mock authentication service for local development
+// Replace with actual backend calls once deployed
 
 export async function loginAdmin(username: string, password: string): Promise<{ success: boolean; token?: string; message?: string }> {
   try {
-    // TODO: Replace with actual backend call once bindings are available
-    // const backend = await import('./backend');
-    // const result = await backend.adminLogin(username, password);
-    // if ('ok' in result) {
-    //   return { success: true, token: result.ok };
-    // } else {
-    //   return { success: false, message: result.err };
-    // }
+    // Simulate network delay
+    await new Promise(resolve => setTimeout(resolve, 800))
 
-    // Mock implementation for demo
+    // Mock credentials - matches backend
     if (username === 'admin' && password === 'ICC@Admin2024') {
-      // Simulate a delay
-      await new Promise(resolve => setTimeout(resolve, 500))
+      const token = `admin-token-${Date.now()}-${Math.random().toString(36).substr(2, 9)}`
       return {
         success: true,
-        token: `mock-token-${Date.now()}`,
+        token: token,
       }
     }
 
     return {
       success: false,
-      message: 'Invalid credentials',
+      message: 'Invalid username or password',
     }
   } catch (error) {
     console.error('Login error:', error)
@@ -32,5 +25,24 @@ export async function loginAdmin(username: string, password: string): Promise<{ 
       success: false,
       message: 'An error occurred during login',
     }
+  }
+}
+
+export async function validateAdminSession(token: string): Promise<boolean> {
+  try {
+    // For mock implementation, just check if token exists
+    return !!token && token.startsWith('admin-token-')
+  } catch (error) {
+    console.error('Session validation error:', error)
+    return false
+  }
+}
+
+export async function logoutAdmin(token: string): Promise<void> {
+  try {
+    // Mock logout - just clear the token
+    console.log('User logged out')
+  } catch (error) {
+    console.error('Logout error:', error)
   }
 }
